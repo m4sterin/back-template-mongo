@@ -115,6 +115,8 @@ namespace back_template_mongo
 
 			services.AddControllers();
 			services.AddScoped<SeedingService>();
+
+			services.AddHealthChecks();
 		}
 
 		public void Configure(IApplicationBuilder app, IWebHostEnvironment env, SeedingService seedingService, ILoggerManager logger)
@@ -151,7 +153,10 @@ namespace back_template_mongo
 			app.UseEndpoints(endpoints =>
 			{
 				endpoints.MapControllers();
+				endpoints.MapHealthChecks("/health");
 			});
+
+			app.UseHealthChecks("/health");
 		}
 	}
 }
