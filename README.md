@@ -42,6 +42,10 @@ Checking
 curl http://0.0.0.0:4100/health
 curl -X GET "http://0.0.0.0:4100/api/Livro"
 ```
+Run tests
+```
+dotnet test
+```
 
 ## Create/Publish a Docker Image
 
