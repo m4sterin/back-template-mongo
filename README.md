@@ -93,7 +93,7 @@ kubectl port-forward svc/api-books-dotnet 4000:4000
 
 ## API Details
 
-### Mongo object example(Books)
+### Mongo object example(Livros)
 
 ```javascript
     {
